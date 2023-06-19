@@ -14,6 +14,14 @@
             resetCount();
           });
 
+          const saveButton = document.getElementById('save-button');
+          saveButton.addEventListener('click', function() {
+            updateLastUpdated();
+            saveTextMemo();
+            saveText();
+            saveM();
+          });
+
           const copyButton = document.getElementById('copy-button');
           copyButton.addEventListener('click', function() {
             copyToClipboard();
@@ -22,8 +30,13 @@
           const textInputMemo = document.getElementById('kokomemo');
           textInputMemo.addEventListener('input', function() {
             saveTextMemo();
+            saveText();
           });
         });
+
+        function saveM() {
+          console.log('saveOK');
+        }
 
         function countCharacters() {
           const text = document.getElementById('text-input').value;
@@ -34,12 +47,14 @@
           document.getElementById('count-without-spaces').textContent = countWithoutSpaces;
 
           saveText();
+          saveTextMemo();
         }
 
         function resetCount() {
           document.getElementById('text-input').value = '';
           document.getElementById('kokomemo').value = '';
           document.getElementById('limit-input').value = '';
+          localStorage.clear();
           countCharacters();
         }
 
@@ -75,6 +90,7 @@
             document.getElementById('kokomemo').value = savedTextMemo;
           }
         }
+
 
         function displayLastUpdated() {
           const timestamp = localStorage.getItem('lastUpdated');
