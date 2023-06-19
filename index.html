@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <title>文字カウントサイト | by moon</title>
+    <title>文字カウントサイト</title>
 	<meta name="description" content="大学のレポート課題に使える保存機能付き文字カウント。間違ってタブを閉じちゃったり再読み込みしても本文は残る！！だからうっかりさんにも最適！！">
 </head>
 
@@ -18,7 +18,8 @@
             <div class="memo">
             <textarea id="kokomemo" class="form-control" rows="4" placeholder="課題の指示・メモ　例）あなたが思うメディアについて300字程度で書きなさい"></textarea></div>
             <div class="memo">
-            <textarea id="text-input" class="form-control" rows="8" placeholder="カウントするテキストを入力してください"></textarea></div>
+            <textarea id="text-input" class="form-control" rows="8" placeholder="カウントするテキストを入力してください"></textarea>
+            <button id="save-button" onclick="saveText();saveTextMemo()" class="btn btn-primary">保存</button></div>
         <div class="mb-3">
             <label for="limit-input" class="form-label">文字数制限（0の場合は制限なし）</label>
             <input id="limit-input" type="number" min="0" class="form-control">
