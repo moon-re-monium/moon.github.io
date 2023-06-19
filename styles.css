@@ -1,0 +1,26 @@
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.memo {
+    margin-bottom: 30px;
+}
+
+.exceeded {
+    color: red;
+    font-weight: bold;
+}
+
+#last-updated {
+    font-size: 12px;
+    color: #777;
+}
