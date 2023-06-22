@@ -96,7 +96,7 @@ function copyToClipboard() {
 
 function showCopyConfirmation() {
   const copyButton = document.getElementById('copy-button');
-  copyButton.textContent = '✓ クリップボードにコピー';
+  copyButton.textContent = '✓コピーされました';
 
   setTimeout(function() {
     copyButton.textContent = 'クリップボードにコピー';
