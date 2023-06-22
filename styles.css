@@ -8,7 +8,7 @@
 
 h4 {
     color: #333;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .memo {
@@ -20,8 +20,16 @@ h4 {
 }
 
 .exceeded {
-    color: red;
+    color: rgb(31, 31, 31);
     font-weight: bold;
+}
+
+.limit-minus {
+    color: rgb(217, 50, 75);
+}
+
+.limit-plus {
+    color: rgb(29, 54, 219);
 }
 
 #last-updated {
