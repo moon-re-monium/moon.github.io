@@ -21,6 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const saveButton = document.getElementById('save-button');
   saveButton.addEventListener('click', function() {
+    saveButton.addEventListener('click', function() {
+  saveButton.classList.add('btn-success'); // ボタンの色を緑に変更
+  saveButton.textContent = '✓'; // テキストを"✓"に変更
+
+  setTimeout(function() {
+    saveButton.classList.remove('btn-success'); // ボタンの色を元に戻す
+    saveButton.textContent = '保存'; // テキストを"保存"に戻す
+  }, 2000); // 2秒後に元に戻す
+});
     updateLastUpdated();
     saveTextMemo();
     saveText();
@@ -96,11 +105,13 @@ function copyToClipboard() {
 
 function showCopyConfirmation() {
   const copyButton = document.getElementById('copy-button');
-  copyButton.textContent = '✓コピーされました';
+  copyButton.textContent = 'コピーされました✓';
+  copyButton.classList.add('btn-success'); 
 
   setTimeout(function() {
     copyButton.textContent = 'クリップボードにコピー';
-  }, 1000);
+    copyButton.classList.remove('btn-success'); 
+  }, 1500);
 }
 
 function saveText() {
